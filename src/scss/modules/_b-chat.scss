@@ -1,0 +1,203 @@
+.b-chat {
+  padding: $b-chat-pt $b-chat-pr $b-chat-pb $b-chat-pl;
+  background-color: $chat-bg;
+  box-shadow: 0 8px 10px -5px rgba(0,0,0,.1);
+  border-radius: $b-chat-br;
+  position: relative;
+  z-index: 1000;
+  margin-top: 15px;
+  &__aside {
+    width: $b-chat-w;
+    height: 100%;
+    max-height: $b-chat-max-h;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 500;
+    border-right: 1px solid $document-bg;
+    background-color: $chat-bg;
+    border-top-left-radius: 6px;
+    .toggle-btn {
+      display: none;
+      width: 14px;
+      height: 20px;
+      background-image: url('../img/toggle.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+      transform-origin: 50% 50%;
+      position: absolute;
+      left: 50%;
+      top: 45px;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+  &--task {
+    .toggle-btn {
+      display: block;
+    }
+    &.closed {
+      .toggle-btn {
+        transform: translate(-50%, -50%) rotate(0);
+      }
+      .b-chat__send-form {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    font-family: $medium;
+    color: $dark;
+    padding: 0 $b-chat-send-form-pr 0 $b-chat-send-form-pl;
+    &--general {
+      color: $blue;
+    }
+  }
+  &__send-form {
+    padding: $b-chat-send-form-pt $b-chat-send-form-pr $b-chat-send-form-pb $b-chat-send-form-pl;
+    border-bottom: 1px solid $document-bg;
+    font-size: 0;
+    form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+    .uploaded-files-preview {
+      padding-top: 15px;
+      .b-file {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        width: 100px;
+        height: 100px;
+        background-color: $document-bg;
+        box-shadow: 0 1px 6px rgba(0,0,0,.2);
+        transition: all .3s ease-in-out;
+        position: relative;
+        &:last-child {
+          margin-right: 0;
+        }
+        &--video {
+          img {
+            max-width: 26px;
+          }
+        }
+        &--document {
+          img {
+            max-width: 17px;
+          }
+        }
+        &--archive {
+          img {
+            max-width: 21px;
+          }
+        }
+        &:hover {
+          box-shadow: 0 3px 7px rgba(0,0,0,.2);
+        }
+        .close-btn {
+          display: block;
+          width: 18px;
+          height: 18px;
+          margin: 0;
+          padding: 0;
+          border: none;
+          background-color: rgba(0,0,0,.41);
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-image: url('../img/close.svg');
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: 8px auto;
+          cursor: pointer;
+        }
+      }
+    }
+    &__textarea {
+      display: inline-block;
+      vertical-align: middle;
+      height: 19px;
+      width: 100%;
+      max-width: $b-chat-send-form-input-max-w;
+      border: none;
+      border-radius: $b-chat-send-form-input-br;
+      background-color: $document-bg;
+      box-shadow: 0 1px 6px rgba(0,0,0,.2);
+      padding: $b-chat-send-form-input-pt $b-chat-send-form-input-pr $b-chat-send-form-input-pb $b-chat-send-form-input-pl;
+      margin: 0;
+      font-family: $regular;
+      font-size: 1rem;
+      color: $dark;
+      resize: none;
+      overflow: hidden;
+      transition: all .3s ease-in-out;
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $dark;
+        opacity: 1;
+      }
+      ::-moz-placeholder { /* Firefox 19+ */
+        color: $dark;
+        opacity: 1;
+      }
+      :-ms-input-placeholder { /* IE 10+ */
+        color: $dark;
+        opacity: 1;
+      }
+      :-moz-placeholder { /* Firefox 18- */
+        color: $dark;
+        opacity: 1;
+      }
+    }
+    &__emoji-btn {
+      display: inline-block;
+      vertical-align: middle;
+      width: $sm-btn-w;
+      height: $sm-btn-h;
+      padding: 0;
+      margin: 0 15px;
+      background-image: url('../img/emoji.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    &__upload-btn {
+      display: inline-block;
+      vertical-align: middle;
+      width: $sm-btn-w;
+      height: $sm-btn-h;
+      padding: 0;
+      margin: 0 15px;
+      background-image: url('../img/upload.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    &__send-btn {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      max-width: $send-btn-max-w;
+      border: none;
+      border-radius: $b-chat-send-form-input-br;
+      background-color: $blue;
+      box-shadow: 0 1px 6px rgba(0,0,0,.2);
+      padding: $b-chat-send-form-input-pt $b-chat-send-form-input-pr $b-chat-send-form-input-pb $b-chat-send-form-input-pl;
+      font-family: $medium;
+      font-size: 1rem;
+      color: $chat-bg;
+      cursor: pointer;
+    }
+  }
+}

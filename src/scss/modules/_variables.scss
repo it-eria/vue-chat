@@ -1,0 +1,79 @@
+// Colors
+$document-bg: #f7f8f8;
+$chat-bg: #fff;
+$blue: #6caac1;
+$dark: #3f4145;
+
+// Fonts
+$big-noodle: 'BigNoodleTooOblique', Tahoma, sans-serif;
+$black: 'Raleway-Black', Tahoma, sans-serif;
+$bold: 'Raleway-Bold', Tahoma, sans-serif;
+$light: 'Raleway-Light', Tahoma, sans-serif;
+$medium: 'Raleway-Medium', Tahoma, sans-serif;
+$regular: 'Raleway-Regular', Tahoma, sans-serif;
+$thin: 'Raleway-Thin', Tahoma, sans-serif;
+
+// ---------- Chat app ----------
+/* max-width */
+$chat-app-mw: 1100px;
+/* Margins */
+$chat-app-mr: auto; // Margin right
+$chat-app-ml: auto; // Margin left
+/* Paddings */
+$chat-app-pt: 26px; // Padding top
+$chat-app-pb: 70px; // Padding bottom
+/* min-height */
+$chat-app-h: calc(100vh - 96px);
+
+// ---------- b-chat ----------
+/* Paddings */
+$b-chat-pt: 30px; // Padding top
+$b-chat-pr: 80px; // Padding right
+$b-chat-pb: 20px; // Padding bottom
+$b-chat-pl: 140px; // Padding left
+/* Border */
+$b-chat-br: 6px; // Border radius
+
+// ---------- b-chat aside ----------
+$b-chat-w: 50px; // Width
+$b-chat-max-h: 890px; // Max height
+
+// ---------- b-chat send form ----------
+/* Paddings */
+$b-chat-send-form-pt: 20px; // Padding top
+$b-chat-send-form-pr: 15px; // Padding right
+$b-chat-send-form-pb: 30px; // Padding bottom
+$b-chat-send-form-pl: 15px; // Padding left
+/* Textarea */
+$b-chat-send-form-input-br: 14px; // Border radius
+$b-chat-send-form-input-pt: 9px; // Padding top
+$b-chat-send-form-input-pr: 20px; // Padding right
+$b-chat-send-form-input-pb: 9px; // Padding bottom
+$b-chat-send-form-input-pl: 20px; // Padding left
+/* Sizes */
+$b-chat-send-form-input-max-w: calc(100% - 370px); // Max width
+/* Small buttons */
+$sm-btn-w: 24px; // Width
+$sm-btn-h: 24px; // Height
+/* Send button */
+$send-btn-max-w: 160px; // Max width
+/* Space between */
+$b-chat-send-form-items-space: 30px; // Right space
+
+// ---------- b-chat message ----------
+$b-chat-message-pt: 30px; // Padding top
+$b-chat-message-pr: 15px; // Padding right
+$b-chat-message-pb: 20px; // Padding bottom
+$b-chat-message-pl: 15px; // Padding left
+/* Message line */
+$b-chat-msg-line-pt: 15px; // Padding top
+$b-chat-msg-line-pr: 0; // Padding right
+$b-chat-msg-line-pb: 15px; // Padding bottom
+$b-chat-msg-line-pl: 0; // Padding left
+/* File links */
+$file-link-w: 50px; // Width
+$file-link-h: 50px; // Height
+$file-link-br: 5px; // Border radius
+/* Avatar */
+$avatar-w: 35px; // Width
+$avatar-h: 35px; // Height

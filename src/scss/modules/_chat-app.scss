@@ -1,0 +1,8 @@
+#chat-app {
+  max-width: $chat-app-mw;
+  height: $chat-app-h;
+  margin: 0 $chat-app-mr 0 $chat-app-ml;
+  padding: $chat-app-pt 15px $chat-app-pb;
+  overflow: hidden;
+  overflow-y: auto;
+}

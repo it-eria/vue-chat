@@ -1,0 +1,38 @@
+{
+  "paths": {
+    "src": {
+      "scss": "src/scss/",
+      "fonts": "src/fonts/",
+      "img": "src/img/",
+      "html": "src/"
+    },
+    "build": {
+      "html": "build/",
+      "css": "build/css/",
+      "img": "build/img/",
+      "fonts": "build/fonts/"
+    },
+    "clear": {
+      "html": ["build/*.html"],
+      "styles": ["build/assets/css/*"],
+      "images": ["build/assets/img/*"],
+      "fonts": ["build/assets/fonts/*"],
+      "build": ["build/*"]
+    },
+    "watch": {
+      "scss": "src/scss/**/*.scss",
+      "img": "src/img/**/*.*",
+      "fonts": "src/fonts/**/*.*",
+      "html": "src/*.html"
+    }
+  },
+  "serverConf": {
+    "server": {
+      "baseDir": "./build",
+      "serveStaticOptions": {
+          "extensions": ["html"]
+      }        
+    },
+    "notify": false
+  }
+}

@@ -1,0 +1,123 @@
+.b-chat__message {
+  border-radius: 6px;
+  padding: $b-chat-message-pt $b-chat-message-pr $b-chat-message-pb $b-chat-message-pl;
+  border-bottom: 1px solid $document-bg;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  &:hover {
+    background-color: $document-bg;
+    &:before, &:after {
+      background-color: $document-bg;
+    }
+  }
+  &:before {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    transition: all .3s ease-in-out;
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: all .3s ease-in-out;
+  }
+  &__inf-line {
+    h4 {
+      font-family: $bold;
+      color: $dark;
+      font-size: 1rem;
+      display: inline-block;
+    }
+    span {
+      font-family: $light;
+      font-size: 1rem;
+      color: $dark;
+      margin-left: 20px;
+    }
+  }
+  &__message-line {
+    padding: 15px 0;
+    p {
+      font-family: $light;
+      font-size: 1rem;
+      color: $dark;
+    }
+  }
+  &__user-avatar {
+    position: absolute;
+    top: 25px;
+    left: -55px;
+    z-index: 900;
+    width: $avatar-w;
+    height: $avatar-h;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.file-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  margin-right: 15px;
+  width: $file-link-w;
+  height: $file-link-h;
+  border-radius: $file-link-br;
+  background-color: $document-bg;
+  box-shadow: 0 1px 6px rgba(0,0,0,.2);
+  transition: all .3s ease-in-out;
+  position: relative;
+  &:last-child {
+    margin-right: 0;
+  }
+  &--video {
+    img {
+      max-width: 26px;
+    }
+  }
+  &--document {
+    img {
+      max-width: 17px;
+    }
+  }
+  &--archive {
+    img {
+      max-width: 21px;
+    }
+  }
+  &:hover {
+    box-shadow: 0 3px 7px rgba(0,0,0,.2);
+  }
+}
+
+.non-photos {
+  padding: 0 0 15px;
+}
+
+.photos {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  a {
+    display: inline-block;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

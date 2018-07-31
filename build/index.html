@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat layout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="chat-app">
+    <!-- Chat -->
+    <div class="b-chat">
+      <div class="b-chat__aside"></div>
+      <div class="b-chat__title b-chat__title--general">
+        <h2>General</h2>
+      </div>
+      <!-- Send form -->
+      <div class="b-chat__send-form">
+        <form action="#">
+          <textarea class="b-chat__send-form__textarea" placeholder="Type your message..." onkeyup="AutoGrowTextArea(this)" cols="50"></textarea>
+          <button class="b-chat__send-form__emoji-btn"></button>
+          <button class="b-chat__send-form__upload-btn"></button>
+          <button class="b-chat__send-form__send-btn">Send</button>
+        </form>
+        <div class="uploaded-files-preview">
+          <div class="b-file b-file--photo">
+            <button class="close-btn"></button>
+            <img src="img/upload-1.jpg" alt="photo">
+          </div>
+          <div class="b-file b-file--video">
+            <button class="close-btn"></button>
+            <img src="img/video.svg" alt="video">
+          </div>
+          <div class="b-file b-file--document">
+            <button class="close-btn"></button>
+            <img src="img/document.svg" alt="document">
+          </div>
+          <div class="b-file b-file--archive">
+            <button class="close-btn"></button>
+            <img src="img/archive.svg" alt="archive">
+          </div>
+        </div>
+      </div>
+      <!-- /Send form -->
+      <!-- Message -->
+      <div class="b-chat__message">
+        <div class="b-chat__message__user-avatar">
+          <img src="img/avatar-1.jpg" alt="user avatar">
+        </div>
+        <div class="b-chat__message__inf-line">
+          <h4>Veronica Gromadska</h4>
+          <span>2018.07.13</span>
+          <span>9:50 pm</span>
+        </div>
+        <div class="b-chat__message__message-line">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu</p>
+        </div>
+        <div class="b-chat__message__files-line">
+          <div class="non-photos">
+            <a href="#" class="file-link file-link--video">
+              <img src="img/video.svg" alt="video">
+            </a>
+            <a href="#" class="file-link file-link--document">
+              <img src="img/document.svg" alt="document">
+            </a>
+            <a href="#" class="file-link file-link--archive">
+              <img src="img/archive.svg" alt="archive">
+            </a>
+          </div>
+          <div class="photos">
+            <a href="img/photo-1.jpg" target="_blank">
+              <img src="img/photo-1.jpg" alt="photo">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /Message -->
+      <!-- Message -->
+      <div class="b-chat__message">
+        <div class="b-chat__message__user-avatar">
+          <img src="img/avatar-3.jpg" alt="user avatar">
+        </div>
+        <div class="b-chat__message__inf-line">
+          <h4>Severa Andriy</h4>
+          <span>2018.07.13</span>
+          <span>9:50 pm</span>
+        </div>
+        <div class="b-chat__message__message-line">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="b-chat__message__files-line">
+          <div class="photos">
+            <a href="img/photo-2.jpg" target="_blank">
+              <img src="img/photo-2.jpg" alt="photo">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /Message -->
+      <!-- Message -->
+      <div class="b-chat__message">
+        <div class="b-chat__message__user-avatar">
+          <img src="img/avatar-2.jpg" alt="user avatar">
+        </div>
+        <div class="b-chat__message__inf-line">
+          <h4>Alex Boyko</h4>
+          <span>2018.07.13</span>
+          <span>9:50 pm</span>
+        </div>
+        <div class="b-chat__message__message-line">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <!-- /Message -->
+    </div>
+    <!-- /Chat -->
+
+    <!-- Chat -->
+    <div class="b-chat b-chat--task closed">
+      <div class="b-chat__aside">
+        <a href="#" class="toggle-btn"></a>
+      </div>
+      <div class="b-chat__title">
+        <h2>Task #1</h2>
+      </div>
+      <!-- Send form -->
+      <div class="b-chat__send-form">
+        <form action="#">
+          <textarea class="b-chat__send-form__textarea" placeholder="Type your message..." onkeyup="AutoGrowTextArea(this)" cols="50"></textarea>
+          <button class="b-chat__send-form__emoji-btn"></button>
+          <button class="b-chat__send-form__upload-btn"></button>
+          <button class="b-chat__send-form__send-btn">Send</button>
+        </form>
+      </div>
+      <!-- /Send form -->
+      <!-- Message -->
+      <div class="b-chat__message">
+        <div class="b-chat__message__user-avatar">
+          <img src="img/avatar-3.jpg" alt="user avatar">
+        </div>
+        <div class="b-chat__message__inf-line">
+          <h4>Severa Andriy</h4>
+          <span>2018.07.13</span>
+          <span>9:50 pm</span>
+        </div>
+        <div class="b-chat__message__message-line">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <!-- /Message -->
+    </div>
+    <!-- /Chat -->
+
+    <!-- Chat -->
+    <div class="b-chat b-chat--task">
+      <div class="b-chat__aside">
+        <a href="#" class="toggle-btn"></a>
+      </div>
+      <div class="b-chat__title">
+        <h2>Task #2</h2>
+      </div>
+      <!-- Send form -->
+      <div class="b-chat__send-form">
+        <form action="#">
+          <textarea class="b-chat__send-form__textarea" placeholder="Type your message..." onkeyup="AutoGrowTextArea(this)" cols="50"></textarea>
+          <button class="b-chat__send-form__emoji-btn"></button>
+          <button class="b-chat__send-form__upload-btn"></button>
+          <button class="b-chat__send-form__send-btn">Send</button>
+        </form>
+      </div>
+      <!-- /Send form -->
+      <!-- Message -->
+      <div class="b-chat__message">
+        <div class="b-chat__message__user-avatar">
+          <img src="img/avatar-1.jpg" alt="user avatar">
+        </div>
+        <div class="b-chat__message__inf-line">
+          <h4>Veronica Gromadska</h4>
+          <span>2018.07.13</span>
+          <span>9:50 pm</span>
+        </div>
+        <div class="b-chat__message__message-line">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillu</p>
+        </div>
+        <div class="b-chat__message__files-line">
+          <div class="photos">
+            <a href="img/photo-3.jpg" target="_blank">
+              <img src="img/photo-3.jpg" alt="photo">
+            </a>
+            <a href="img/photo-4.jpg" target="_blank">
+              <img src="img/photo-4.jpg" alt="photo">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /Message -->
+      <!-- Message -->
+      <div class="b-chat__message">
+        <div class="b-chat__message__user-avatar">
+          <img src="img/avatar-3.jpg" alt="user avatar">
+        </div>
+        <div class="b-chat__message__inf-line">
+          <h4>Severa Andriy</h4>
+          <span>2018.07.13</span>
+          <span>9:50 pm</span>
+        </div>
+        <div class="b-chat__message__message-line">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="b-chat__message__files-line">
+          <div class="photos">
+            <a href="img/photo-2.jpg" target="_blank">
+              <img src="img/photo-2.jpg" alt="photo">
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /Message -->
+      <!-- Message -->
+      <div class="b-chat__message">
+        <div class="b-chat__message__user-avatar">
+          <img src="img/avatar-2.jpg" alt="user avatar">
+        </div>
+        <div class="b-chat__message__inf-line">
+          <h4>Alex Boyko</h4>
+          <span>2018.07.13</span>
+          <span>9:50 pm</span>
+        </div>
+        <div class="b-chat__message__message-line">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <!-- /Message -->
+    </div>
+    <!-- /Chat -->
+  </div>
+
+  <script>
+    function AutoGrowTextArea(textField) {
+      if (textField.clientHeight < textField.scrollHeight) {
+        textField.style.height = textField.scrollHeight + "px";
+        if (textField.clientHeight < textField.scrollHeight){
+          textField.style.height = (textField.scrollHeight * 2 - textField.clientHeight) + "px";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
