@@ -82,6 +82,8 @@
   box-shadow: 0 1px 6px rgba(0,0,0,.2);
   transition: all .3s ease-in-out;
   position: relative;
+  margin-bottom: 20px;
+  text-decoration: none;
   &:last-child {
     margin-right: 0;
   }
@@ -102,6 +104,17 @@
   }
   &:hover {
     box-shadow: 0 3px 7px rgba(0,0,0,.2);
+  }
+  span {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    position: absolute;
+    top: 110%;
+    font-family: $light;
+    color: $dark;
+    text-align: center;
+    word-break: break-all;
   }
 }
 

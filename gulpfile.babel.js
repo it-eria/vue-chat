@@ -5,7 +5,6 @@ import globSass from 'gulp-sass-glob';
 import sourcemap from 'gulp-sourcemaps';
 import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
-import cleanCSS from 'gulp-clean-css';
 import del from 'del';
 import browserSync from 'browser-sync';
 import sysConfig from './system-config.json';
